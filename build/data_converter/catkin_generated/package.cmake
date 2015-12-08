@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "data_converter")
+set(data_converter_MAINTAINER "doopy <doopy@todo.todo>")
+set(data_converter_DEPRECATED "")
+set(data_converter_VERSION "0.0.0")
+set(data_converter_BUILD_DEPENDS "roscpp" "rospy" "std_msgs" "libpcl-all-dev")
+set(data_converter_RUN_DEPENDS "roscpp" "rospy" "std_msgs" "libpcl-all")
+set(data_converter_BUILDTOOL_DEPENDS "catkin")

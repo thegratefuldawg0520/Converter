@@ -1,0 +1,34 @@
+cmake_minimum_required(VERSION 2.8.3)
+project(data_converter)
+
+find_package(catkin REQUIRED COMPONENTS
+  cv_bridge
+  image_transport
+  roscpp
+  rospy
+  std_msgs
+)
+
+find_package(OpenCV)
+
+find_package(PCL)
+
+#generate_messages(DEPENDENCIES std_msgs)
+
+catkin_package()
+
+###########
+## Build ##
+###########
+
+## Specify additional locations of header files
+## Your package locations should be listed before other locations
+# include_directories(include)
+include_directories(
+  ${catkin_INCLUDE_DIRS} ${OpenCV_INCLUDE_DIRS} ${PCL_INCLUDE_DIRS}
+)
+
+add_executable(imgConv src/imgConv.cpp)
+target_link_libraries(imgConv ${catkin_LIBRARIES} ${OpenCV_LIBRARIES} ${PCL_LIBRARIES})
+add_dependencies(imgConv ${catkin_EXPORTED_TARGETS})
+

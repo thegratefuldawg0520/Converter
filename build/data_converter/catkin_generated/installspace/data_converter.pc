@@ -1,0 +1,8 @@
+prefix=/home/doopy/Documents/ros_tango/install
+
+Name: data_converter
+Description: Description of data_converter
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/doopy/Documents/ros_tango/install/lib 
+Requires: 
